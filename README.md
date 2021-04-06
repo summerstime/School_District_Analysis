@@ -13,11 +13,11 @@ The difference between before and after of the removal of the suspect grades wil
 
 
 ## Results
-The results for the district show the following:Results: Using bulleted lists and images of DataFrames as support, address the following questions.
+The results for the district show the following:
 
  * How is the district summary affected by the Thomas High School adjustment? 
 In the original analysis of the district, which kept the grades intact for the 9th graders at THS, the average scores and overall passing percentages were slightly higher. 
-The largest change being the Percentage Overall Passing, which changed from 65.2% to 64.9%. 
+The largest change being the Percentage Overall Passing, which changed from 65.2% to 64.9%. The calculation included the change of total student count, which reduced approximately by 460.
 #### District Original Summary
 ![District Original Summary](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/District_Summary_1st.png) 
 #### District Summary
@@ -53,7 +53,7 @@ Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. A
 ![Scores by School Spending](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Scores_Spending.png)
 
    - Scores by school size
-     - The total number of THS 9th graders taken out of the totals would affect their overall student total by about 460 students.
+     - The total number of THS 9th graders taken out of the totals would affect their overall student total by 461 students. (38709 total students after removal)
 #### School Size Scores
 ![Scores by School Size](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/School_size.png)
     
@@ -65,11 +65,8 @@ Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. A
  
 
 ## Summary
-In summary, the most dramatic change to the results was found in the percentages. Once the 9th graders were removed from the total student count, the percentages reflected
-a more accurate result for the remaining grades. With that change, it affected which
-
-
-
+In summary, the most dramatic change to the results was found in the three percentages for Thomas High School, Passing Math Scores, Passing Reading Scores, and Overall Passing. 
+Once the 9th graders were removed from the total student count, the percentages reflected a great improvement, from 65% to 90% overall. This moved them to the top 5 of schools.
 
 ## Analysis Details
 The data was delivered in two separate files, schools_complete.csv and students_complete.csv. The two files were merged by a join function that matched up the school name in both files. 
@@ -77,12 +74,6 @@ Since the student file has more data, it was used as the left side of the join. 
 To maintain the rules for the Family Educational Rights and Privacy Act (FERPA), the dataframes/displays of data does not show the individual student names with their grades.
 This would be sharing the student's educational record and would violate FERPA. 
 Python, Numpy, Pandas, and Jupyter Notebook were utilized to analysis the merged data to deliever the above results.
-
-
-
-
-
-
-
-
-
+Example of the data showing how NaN is listed in the data.
+#### THS NaN Example
+![THS NaN Examplee](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Thomas_NaN_Example.png)
