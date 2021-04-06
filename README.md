@@ -42,9 +42,9 @@ Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. A
    - Math and reading scores by grade
      - THS's average scores appear to be consistent before and after the removal of the 9th grader's scores.
      - These screenshots show how THS compares to other shools across each grade level. Comparing THS's grade levels, they appear to also be consistent to each other.
-#### Average Math Scores for All Shools
+#### Average Math Scores for All Schools
 ![Average Math](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Average_Math.png)
-#### Average Reading Scores for All Shools
+#### Average Reading Scores for All Schools
 ![Average Reading](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Average_Reading.png)
 
    - Scores by school spending
@@ -57,8 +57,8 @@ Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. A
 #### School Size Scores
 ![Scores by School Size](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/School_size.png)
     
-    - Scores by school type
-      - The adjusted scores helped bring the Charter schools up in overall percentages. The average scores were very similar.
+   - Scores by school type
+     - The adjusted scores helped bring the Charter schools up in overall percentages. The average scores were very similar.
 #### School Type Scores
 ![Scores by School Type](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/School_type.png)
 
@@ -67,6 +67,7 @@ Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. A
 ## Summary
 In summary, the most dramatic change to the results was found in the three percentages for Thomas High School, Passing Math Scores, Passing Reading Scores, and Overall Passing. 
 Once the 9th graders were removed from the total student count, the percentages reflected a great improvement, from 65% to 90% overall. This moved them to the top 5 of schools.
+Another evaluation is the spending per student. The overall district would be affected by the reduction of 461 students; but the total number of students for the district is sufficient enough that the change would be minor; but the change for THS would be much more noticable. 
 
 ## Analysis Details
 The data was delivered in two separate files, schools_complete.csv and students_complete.csv. The two files were merged by a join function that matched up the school name in both files. 
