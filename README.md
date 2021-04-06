@@ -6,47 +6,77 @@ Module 4 Project
 This project is to satisfy the requirements for the fourth module challenge in the Data Analysis Bootcamp. 
 In this project we are asked to help Maria, a Data Scientist, analyze and review the data from a school district.
 The analysis includes results showing performance trends, spending per student, average and overall grades per school, and a comparison of the size school.
-During this analysis, Maria was notified of potential grade tampering at Thomas High School's 9th graders. 
+During this analysis, Maria was notified of potential grade tampering with Thomas High School's (THS) 9th grader's scores. 
 Those math and reading scores will be changed to NaN (not a number); with all other data maintained until further investigation of the tampering can be completed.
 The difference between before and after of the removal of the suspect grades will be reviewed.
-Note:  To maintain the Family Educational Rights and Privacy Act (FERPA) rules, tabulated results will not show the student's name with their individual grades. 
+* Note:  To maintain the Family Educational Rights and Privacy Act (FERPA) rules, results will not show the student's name with their individual grades. 
 
 
 ## Results
 The results for the district show the following:Results: Using bulleted lists and images of DataFrames as support, address the following questions.
-#### Terminal Printout of the Results
-![Terminal Printout](https://github.com/summerstime/Election_Analysis/blob/main/Resources/Screenshot_Terminal_Output.png) 
-	* The district spends $$$ on each student.
-	# Each school spends this much
-	- School types matter
-	How is the district summary affected?
-	How is the school summary affected?
-	How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-	How does replacing the ninth-grade scores affect the following:
-	Math and reading scores by grade
-	Scores by school spending
-	Scores by school size
-	Scores by school type
 
-School and distric level, funding, standardized test scores. aggregate the data, show trends, school budget FERPA-Hide the student names.
+ * How is the district summary affected by the Thomas High School adjustment? 
+In the original analysis of the district, which kept the grades intact for the 9th graders at THS, the average scores and overall passing percentages were slightly higher. 
+The largest change being the Percentage Overall Passing, which changed from 65.2% to 64.9%. 
+#### District Original Summary
+![District Original Summary](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/District_Summary_1st.png) 
+#### District Summary
+![District Summary](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/District_Summary_Challenge.png)
 
+ * How is the school summary affected?
+The Thomas High School percentage summary changed dramatically when the suspect values were removed and the students who had those values were also removed from the calculations.
+To include them in the overall count would shift the percentages to a much lower number.
+The original totals for THS were 66.9%, 69.7%, and 65.1% for math, reading and overall, respectively.
+After the suspect grades were removed the percentages changed to 93.1%, 97.0%, and 90.6%, respectively. 
+#### Thomas School Original Data Summary
+![Thomas School Original Summary](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/THS_B4_NaN_School_Summary.png) 
+#### Thomas School Summary
+![Thomas School Summary](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/THS_School_Summary.png) 
 
+ * How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+Originally, THS was 8th out of 15 schools with an overall percentage of 65.1%. After the adjustment, THS moved to the top 5.
+#### Top 5 Schools
+![Top 5 Schools](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Top_5_Schools.png) 
+
+ * How does replacing the ninth-grade scores affect the following:
+   - Math and reading scores by grade
+     - THS's average scores appear to be consistent before and after the removal of the 9th grader's scores.
+     - These screenshots show how THS compares to other shools across each grade level. Comparing THS's grade levels, they appear to also be consistent to each other.
+#### Average Math Scores for All Shools
+![Average Math](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Average_Math.png)
+#### Average Reading Scores for All Shools
+![Average Reading](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Average_Reading.png)
+
+   - Scores by school spending
+     - The overall school scores would be a little lower, if the adjustment to THS was not made. THS's spending group is approximately $638 per student. That spending group would be affected.
+#### Scores by School Spending
+![Scores by School Spending](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/Scores_Spending.png)
+
+   - Scores by school size
+     - The total number of THS 9th graders taken out of the totals would affect their overall student total by about 460 students.
+#### School Size Scores
+![Scores by School Size](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/School_size.png)
+    
+    - Scores by school type
+      - The adjusted scores helped bring the Charter schools up in overall percentages. The average scores were very similar.
+#### School Type Scores
+![Scores by School Type](https://github.com/summerstime/School_District_Analysis/blob/main/Resources/School_type.png)
+
+ 
 
 ## Summary
-Summarize four major changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
+In summary, the most dramatic change to the results was found in the percentages. Once the 9th graders were removed from the total student count, the percentages reflected
+a more accurate result for the remaining grades. With that change, it affected which
 
 
 
 
 ## Analysis Details
-The data was delivered in two separate files, schools_complete.csv and students_complete.csv. The two files were merged by a join function that matched up the school name in both files. Since the student file has more data, it was used as the left side of the join. The school file joined only that information that matched the student file.
+The data was delivered in two separate files, schools_complete.csv and students_complete.csv. The two files were merged by a join function that matched up the school name in both files. 
+Since the student file has more data, it was used as the left side of the join. The school file joined only that information that matched the student file.
 To maintain the rules for the Family Educational Rights and Privacy Act (FERPA), the dataframes/displays of data does not show the individual student names with their grades.
 This would be sharing the student's educational record and would violate FERPA. 
-
-Before analysis, the data was cleaned of missing or incorrect data. The count() method was used to count all data that was not null. Any discrepancy in the numbers would provide a point to investigate further. None were found in either data set.
-isnull.sum() 
-
-The dataframes show the aggregate results of average scores, spending per student, overall percentages, etc. as described in the Results section of this Readme file.
+Python, Numpy, Pandas, and Jupyter Notebook were utilized to analysis the merged data to deliever the above results.
 
 
 
@@ -56,44 +86,3 @@ The dataframes show the aggregate results of average scores, spending per studen
 
 
 
-
-EXAMPLE
-# Election Analysis for the Colorado Board of Elections
-
-## Overview
-   This project is to satisfy the requirements for the third challenge in the Data Analysis Bootcamp. For this, the task is to analyze/audit the results of a Colorado election. Tom and Seth, who are the requesters of this analysis, are helping by reviewing the python code being written to programmatically review the data quickly and provide results as to the number of votes cast, the quantity per county, total votes per candidate, percentage of county votes, and the overall winner; among other tallied items to be shown here.
-   Two outputs are shown below, one from the terminal and the other that is located in the txt report file, Elections Analysis.txt. Spacing for each is setup differently to match the request by the team. Results of the analysis are the same.
-
-#### Terminal Printout of the Results
-![Terminal Printout](https://github.com/summerstime/Election_Analysis/blob/main/Resources/Screenshot_Terminal_Output.png) 
-
-#### Txt Report Printout of the Results
-![Report Txt File](https://github.com/summerstime/Election_Analysis/blob/main/Resources/Screenshot_Txt_Output_File.png) 
-
-## Election Audit Results
-   Python code was written in Visual Studio. Utilization of for-loops and if-statements helped cycle through the data contained in a csv file, named Election_results.csv. Here is a sample showing the code used to read the csv file.
-   
-#### Sample of Code (CSV Reader)
-![Sample of Code](https://github.com/summerstime/Election_Analysis/blob/main/Resources/Screenshot_of_CSV_Reader.png)
-
-### Total Votes Received
-   * A total of 369,711 votes were cast in this election.
-### County Totals Breakdown
-   * Jefferson county had 38,855 votes which is 10.5% of the total votes.
-   * Denver county had 306,055 votes which is 82.8% of the total votes.
-   * Arapahoe county had 24,801 votes which is 6.7% of the total votes.
-### County with Largest Turnout
-   * Denver county overwhelmingly had the greatest number of votes with 82.8% of the total vote count.
-### Candidate Totals Breakdown
-   * Charles Casper Stockham had 85,213 votes which is 23.0% of the total votes.
-   * Diana DeGette had 272,892 votes which is 73.8% of the total votes.
-   * Raymon Anthony Doane had 11,606 votes which is 3.1% of the total votes.
-## **Winning Candidate**
-   * **Diana DeGette overwhelmingly had the greatest number of votes with 73.8% of the total vote count.**
-
-## Summary of the Analysis Process
-The results of this analysis were quickly obtained through the use of Python and Visual Studio. This basic code can be adjusted and made useful for other elections. There is a basic format the csv file needs to maintain or adjust the code to fit the indexing of each row in the new layout of the election csv file. One modification of the code could be to add user input questions to request which column the county, candidate, etc. are located. This would make the code more adaptable without changing the code for each election analysis. Another modification could be more user input for different aspects for the analysis, such as state, proposal/referendum type, etc. Making the code adjustable to the need of the analysis.
-
-#### Challenges Experienced During Analysis
-The reading of the csv file was difficult since the suggested code was not able to find the necessary file. After many attempts to get the code to read the file, Google was utilized to find other options. A combination of websites offered a way to read the csv file, so the processing of the data continued. 
-The second challenge was getting the different displays to show as requested. The Visual Studio terminal treated the code, such as a new line, differently than the txt_file.write function. Adding \n at the right locations, took some time; but all was figured out.  
